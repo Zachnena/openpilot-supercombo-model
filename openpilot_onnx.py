@@ -38,7 +38,7 @@ def seperate_points_and_std_values(df):
 def main():
 	model = "supercombo.onnx"
 	
-	cap = cv2.VideoCapture('data/cropped_plats.mp4')
+	cap = cv2.VideoCapture('data/images.mp4')
 	parsed_images = []
 
 	width = 512
@@ -187,7 +187,7 @@ def main():
 			plt.scatter(points_road_t, X_IDXS, color = "r")
 			plt.scatter(points_road_t2, X_IDXS, color = "r")
 
-			plt.title("Raod lines")
+			plt.title("Road lines")
 			plt.xlabel("red - road lines | green - predicted path | yellow - lane lines")
 			plt.ylabel("Range")
 			plt.show()
